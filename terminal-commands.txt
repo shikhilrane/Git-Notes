@@ -1,0 +1,8 @@
+1. ls ==> list item (it will show everuything inside of folder)
+2. cd ==> change directory
+    cd .. => it will go back to prev folder
+    cd folder_name => it will go into the next folder
+3. pwd ==> present working directory (it shows directory/folder in which we are rn)
+4. ls -a ==> it shows hidden files (if it contains .git then this folder has access of git)
+5. mkdir ==> make new directory in project
+6. open . ==> to open current folder from terminal

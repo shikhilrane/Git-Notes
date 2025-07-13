@@ -1,0 +1,47 @@
+01. git config --global user.name "Author Name"
+02. git config --global user.email "email id of github account"
+03. git config --list
+04. git config --global --unset user.name
+05. git config --global --unset user.email
+
+Basic commands
+
+(when we are cloning remote repo (github repo))
+06. git clone - cloning a repo on our local machine
+            git clone link_of_project
+07. git status - it use to check status of project
+            git status
+                (if upto date then it will show 'nothing to commit')
+                (if something to commit then it will show M (modified) in front of file and needs to commit and status will ask for add & commit and then if we create a file within a project then git status will show U (untracked) means git is not tracking that file)
+                statuses of files : 
+                    1. untracked - new file that git doesn't track yet (not commited file to git)
+                    2. modified - something changed in tracked file
+                    3. staged - added and ready to commit
+                    4. unmodified - unchanged
+08. git add - add and changed files in your working directory to the git staging area
+            git add file_name OR everything to add use git add .
+            (file with red font need to add)
+09. git commit - it is the record of change in git
+            git commit -m "some message"
+            (file with green font need to commit)
+10. git push - only after committing on local machine it doesn't make changes on github. So to make those changes happen we use git push
+            git push origin main
+                git push - we know
+                origin - by default git repos are called as remote repos. and the repo we clone previously these changes to reflet there
+                
+(when we want to push our local folder to git)
+if we want to make new folder or directly we can check if it is git repo by typing ls -a (if .git present then it will be a git repo otherwise we want to make it) 
+so to make it git repo : 
+11. git init - after using this command in folder our folder will become git repo (we can check it by using ls -a)
+12. git add - to add files (git add file_name OR everything to add use git add .)
+13. git commit - to commit files (git commit -m "some message")
+    after committing, create a repo on github.com
+14. git remote add origin link - it used to tell to github that we want to add new repo / remote
+                                (origin - we can give other name instead of origin but if we give other name, then at the time of push we have to give that name, as we saw in 10th command)
+                                (link - copy the link of the git repo)
+15. git remote -v - it shows the remote we added (from 14) is now present with name. and the repo we got that will be pushed to git
+16. git branch -  It shows on which branch we are on
+        (we will see more about branch but just to get idea of branch - On project one team is working on frontend, second team is working on backend and third team is working on bug fix, then they make clone of repos of their concerned branch and work on it)
+17. git branch -M main - as we know we are on master branch, but name master is not in used in git any more so to rename it we use this command
+18. git push -u origin main - use to push our project on git 
+                              -u = use when we want to work on this repo and dont want to use origin again again on same repo (we can even use 'git push origin main' , but at time of push we need to use 'origin main' always)

@@ -1,0 +1,6 @@
+
+1. Go to github.com 
+2. Create a repo with README.md (it includes information repo, md = markdown)
+3. We will see our repo on our account with README file and initial commit (first ever change)
+4. Then if we edit and commit changes in README.md then commit message will be displayed next to README.md file
+5. README.md file supports html tags like <br> tag for line break
