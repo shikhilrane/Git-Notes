@@ -45,3 +45,11 @@ so to make it git repo :
 17. git branch -M main - as we know we are on master branch, but name master is not in used in git any more so to rename it we use this command
 18. git push -u origin main - use to push our project on git 
                               -u = use when we want to work on this repo and dont want to use origin again again on same repo (we can even use 'git push origin main' , but at time of push we need to use 'origin main' always)
+19. we can add readme.md then
+
+(git branch)
+20. git branch - to check the branch
+21. git branch -M main - to rename the branch (we can put anything in lace of main)
+22. git checkout branch_name - to go to another branch
+23. git checkout -b new_branch_name - to create new branch
+24. git branch -d branch_name - to delete branch (we can't delete branch in which we are currently working)
