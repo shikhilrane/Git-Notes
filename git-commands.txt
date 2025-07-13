@@ -53,3 +53,42 @@ so to make it git repo :
 22. git checkout branch_name - to go to another branch
 23. git checkout -b new_branch_name - to create new branch
 24. git branch -d branch_name - to delete branch (we can't delete branch in which we are currently working)
+example - 
+    to create branch - git branch => (main)
+                       git checkout -b feature1 => (feature1 branch created)
+                       git branch => (feature1)
+                       git add . => to add branch in our git
+                       git commit -m "message' => commit will happen
+                       git push => to push feature1 on git
+                       when we add any content while using branch feature1 in out file then it will be only for feature branch and if we git checkout main, this added things from feature 1 wont reflect for main branch, so to bring out those changes in main branch we have to make sure sure that we are on feature1 branch by using cmd git checkout feature1 then run,
+                       git push origin feature1 => pushing changes to feature1 branch
+                       go to github, it will show "compare and pull request" (it will merge feature1 with main), also we can see check branches there on which feature1 branch updates wont reflected in main branch. So to merge feature1 with main, there are 2 ways,
+                       way 1 : 
+                       git diff branch_name => it will compare 2 files, commits, branches (if we use this from feature1, it will show feature1 is ahead of main branch becasue we have added content from feature1 branch)
+                       git merge main = it will merge feature 1 with main
+                       way 2 :
+                       create a PR - it is Pull Request, developers want to deploy their changes with project with main branch then this can be done in industires, if you make pull request, senior engineers will decide whether accept this pull request or not, and as they accept out feature1 branch will get reflected in main in git.
+                       But in our code editor of local machine that feature1's code doesn't get reflected yet,becasue changes happened at git and not on local, so to bring that git changes on local use command, 
+                       git pull origin main => it will bring changes of git on local
+    to delete branch - git branch => (feature1)
+     (from above)      git checkout -b feature2 => (feature2 branch created)
+                       git branch => (feature2)
+                       git checkout main or feature1 => main or feature1
+                       git branch -d feature2 => it will delete the branch from project
+
+(delete file from both local machine and git repo)
+git rm file_name_with_extention - it will delete file from both local machine and git repo
+git commit -m "Deleted example.txt" - then after deleting we have to commit the delete
+git push - push this chnage to git
+
+(delete file from only from git repo)
+git rm --cached file_name_with_extention - it will delete file from git but not from local machine
+git commit -m "Stop tracking secret.txt" - after deleting from there, commit the changes
+git push - push the change to git
+
+(put file .gitignore for a file that should not be tracked by git)
+git rm --cached file_name_with_extention - it will delete file from git but not from local machine
+echo file_name_with_extention >> .gitignore - it will add a file in .gitignore
+git add .gitignore - staged/add .gitignore
+git commit -m "added ignore.txt to .gitignore" - commit the changes
+git push - to push in git
