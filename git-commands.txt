@@ -76,6 +76,15 @@ example -
                        git checkout main or feature1 => main or feature1
                        git branch -d feature2 => it will delete the branch from project
 
+(log)
+25. git log - It shows the list of commit we performed till now. This shows a list of commits in reverse chronological order with details like commit hash, author, date, and commit message.
+26. git log --oneline  -  One commit per line (short hash and message)
+27. git log --graph  -	Shows a visual graph of the commit history
+28. git log --all  - 	Shows log from all branches
+29. git log -p  -	Shows the diff introduced in each commit
+30. git log --stat  -	Shows stats about what changed in each commit
+(NOTE : to quit from log press 'q')
+
 (delete file from both local machine and git repo)
 git rm file_name_with_extention - it will delete file from both local machine and git repo
 git commit -m "Deleted example.txt" - then after deleting we have to commit the delete
@@ -92,3 +101,68 @@ echo file_name_with_extention >> .gitignore - it will add a file in .gitignore
 git add .gitignore - staged/add .gitignore
 git commit -m "added ignore.txt to .gitignore" - commit the changes
 git push - to push in git
+
+(Resolving merge conflict)
+An event take place when git unable to automatically resolve differences in code between two commits.
+suppose : 
+from main branch we added something in file, then add and commit (e.g. <p>this is feature1 added to understand git branch (button)</p>)
+then we checkout to feature1 and did added something on same place but different content , then add and commit (e.g. <p>this is feature1 added to understand git branch (dropdown)</p>)
+and checked difference of current branch with main i.e.
+git diff main - it will show difference, and shows in main branch (button ) was added and in feature1 you deleted that button and added (dropdown).
+now merge with CLI method or with Pull Request (we will use CLI method here)
+currently we are on feature1 branch, and write
+git merge main - it will show error. In this case we have to manually resolve the merge conflict
+                in code editor, it shows a line with green line which is for HEAD(current branch) and blue line with another conflicted branch
+                Accept current change - to accept the code of current branch
+                Accept incoming changes - to accept the code of branch with whom code is conflicted
+                Accept both changes - to accept the both changes
+                also, we can do this manually by deleting <<<<<<< HEAD , =======, >>>>>>> main
+                then,
+                to keep code of current branch (feature1) = delete the code of main branch
+                or to keep code of main branch (main) = delete the code of feature1 branch
+                or to keep the both = dont change anything
+save the change
+add the file
+then commit
+then check the diff with main = we will still have 1 change more than main change (i.e. these doesn't get updated yet in main branch)
+then checkout for main branch = git checkout main
+so to merge this with main = git merge feature1
+now main branch has got the changes from feature1
+git push
+
+(Undo changes)
+Type 1. - A change that we added
+It is the case when, we have to undo the thing that we have added(staged) and want to go back, then,
+so from main branch, 
+    1. to reset changes in specific file we can use - git reset file_name
+    2. to reset changes in changes in all files - git reset
+then, terminal will reset the changes, and show these changes are unstaged 
+then, if we check status if will show, file is modified and not added yet (it goes back from staged to unstaged)
+
+Type 2. - A change that we commit (for single commit)
+if we have deleted something and performed add and commit
+then we checked the status - it will show our branch is 1 commit ahead (means on github deleted change is present but not here in code editor)
+to reset that commit,
+git reset HEAD~1 = HEAD~1 means we save all the commits internally in git that we have performed till yet, and the latest commit is HEAD so it will reset the HEAD by 1, and the commit before this deleted HEAD will become HEAD
+Now after this, our file will be in unstaged mode 
+
+Type 3. - A change that we commit (for multiple commit)
+to reset the commit after multiple commits
+suppose - commit 1 -> commit 2 -> commit 3 -> commit 4(HEAD)
+now we want to go back to back to commit 2 (to change HEAD from commit 4 to commit 2) then use,
+git reset hash_code = it will only remove changes from git
+git reset --hard hash_code = it will only remove changes from git and vscode both
+we will get hash_code, by git log, and enter the hash_code of the commit to which we want to reset 
+now if we check git status, it will show commit 2 as HEAD now
+and if git status shows, Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded. (use "git pull" to update your local branch) and if we use git pull then we will reset the thing that we currently resetted.
+In these kind case code isn't updated on github , then use 'git push origin HEAD --force' , it will bring changes on github code as well
+
+(fork)
+A fork is a new repo that shared code and visibility settings with the originl "upstream" repo
+fork is a rough copy
+if we want to work on repo of colleage, friend or to work opensource use fork
+go to the project that we want to fork and click on the fork button
+it will create fork, it will ask repo name , and Copy the master branch only(if we checked this then it will only fork master branch and if not then it will fork whole project )
+Now we can see whole code of that project reflected on our github project
+and for e.g. if we edited README.md and then commit changes then these changes will reflected on our forked project and not on, from which we forked
+then we can create a pull request (from tab that present above and in side of code)
