@@ -6,3 +6,64 @@
 4. ls -a ==> it shows hidden files (if it contains .git then this folder has access of git)
 5. mkdir ==> make new directory in project
 6. open . ==> to open current folder from terminal
+
+File and Directory Management
+Command	Description
+ls	List files in current directory
+ls -la	List all files including hidden, in long format
+cd <directory>	Change directory
+cd ..	Go up one directory level
+cd ~	Go to home directory
+pwd	Show current directory
+mkdir <dirname>	Create new directory
+touch <filename>	Create new empty file
+rm <file>	Delete a file
+rm -r <directory>	Delete a directory and its contents
+cp <src> <dest>	Copy files or directories
+mv <src> <dest>	Move or rename files or directories
+
+System & Process Management
+Command	Description
+top	View running processes
+ps aux	Detailed list of running processes
+kill <PID>	Kill a process by PID
+sudo <command>	Run command with superuser privileges
+shutdown -h now	Shut down the Mac immediately
+reboot	Restart the Mac
+
+Networking
+Command	Description
+ping <host>	Ping a domain or IP
+ifconfig	Show network interface details
+netstat -an	Show network connections
+curl <url>	Fetch a URL
+scp <file> user@host:/path	Secure copy to remote host
+ssh user@host	SSH into remote server
+
+Searching & Finding
+Command	Description
+find . -name "<filename>"	Search for files
+grep "<text>" <file>	Search text in files
+grep -r "<text>" <directory>	Recursively search text
+
+Disk & Permissions
+Command	Description
+df -h	Show disk usage
+du -sh *	Show size of files/directories
+chmod <mode> <file>	Change file permissions
+chown <user>:<group> <file>	Change ownership
+
+Package & Software Management
+(macOS doesn't use apt/yum by default, but you can use Homebrew)
+Command	Description
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"	Install Homebrew
+brew install <package>	Install a package
+brew update	Update Homebrew
+brew upgrade	Upgrade installed packages
+
+Shortcuts
+Command	Description
+Ctrl + C	Cancel running command
+Ctrl + L	Clear Terminal screen
+↑ / ↓	Scroll through command history
+Tab	Autocomplete command or file name
