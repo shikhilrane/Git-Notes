@@ -54,14 +54,16 @@ so to make it git repo :
 18. git push -u origin main - use to push our project on git 
                               -u = use when we want to work on this repo and dont want to use origin again again on same repo (we can even use 'git push origin main' , but at time of push we need to use 'origin main' always)
 19. we can add readme.md then
-    Steps = 1. get in the folder where we want to clone the git repo
-            2. use 'git init'
-            3. use 'git status' to check status
-            4. use 'git remote add origin "link"'
-            5. use 'git remote -v'
-            6. use 'git branch' to see on which branch we are on
-            7. use 'git branch -M main'
-            8. use 'git push -u origin main'
+    Steps = 01. get in the folder where we want to clone the git repo
+            02. use 'git init'
+            03. use 'git status' to check status
+            04. use 'git add .'
+            05. use 'git commit -m "message"'
+            06. use 'git remote add origin "link"'
+            07. use 'git remote -v'
+            08. use 'git branch' to see on which branch we are on
+            09. use 'git branch -M main'
+            10. use 'git push -u origin main'
 
 
 
