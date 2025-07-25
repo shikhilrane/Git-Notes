@@ -32,8 +32,8 @@ mkdir <dirname>	    Create new directory
 touch <filename>    Create new empty file
 rm <file>	        Delete a file
 rm -r <directory>	Delete a directory and its contents
-cp <src> <dest>	    Copy files or directories
-mv <src> <dest>	    Move or rename files or directories
+cp <src> <dest>	    Copy files or directories from source to destination
+mv <src> <dest>	    Move or rename files or directories from source to destination
 
 C. System & Process Management : 
 Command	            Description
