@@ -1,4 +1,4 @@
-A. Basic Commands (frequently used commands)
+A. Basic Commands (frequently used commands) : 
 Command	                Description
 01. ls                  list item (it will show everuything inside of folder)
 02. cd ..	            Go up one directory level
@@ -9,17 +9,18 @@ Command	                Description
 07. mkdir folder_name   make new directory in project
 08. touch <filename>    Create new empty file
 09. open .              to open current folder from terminal
-10. ls -la	            List all files including hidden, in long format
-11. rm <file>	        Delete a file
-12. rm -r <directory>	Delete a directory and its contents
-13. cp <src> <dest>	    Copy files or directories
-14. mv <src> <dest>	    Move or rename files or directories
-15. Ctrl + C	        Cancel running command
-16. Ctrl + L	        Clear Terminal screen
-17. ↑ / ↓	            Scroll through command history
-18. Tab	                Autocomplete command or file name
+10. code .              to open folder in s code
+11. ls -la	            List all files including hidden, in long format
+12. rm <file>	        Delete a file
+13. rm -r <directory>	Delete a directory and its contents
+14. cp <src> <dest>	    Copy files or directories
+15. mv <src> <dest>	    Move or rename files or directories
+16. Cmd + C	            Cancel running command
+17. Cmd + K	            Clear Terminal screen
+18. ↑ / ↓	            Scroll through command history
+19. Tab	                Autocomplete command or file name
 
-B. File and Directory Management
+B. File and Directory Management : 
 Command	            Description
 ls	                List files in current directory
 ls -la	            List all files including hidden, in long format
@@ -34,7 +35,7 @@ rm -r <directory>	Delete a directory and its contents
 cp <src> <dest>	    Copy files or directories
 mv <src> <dest>	    Move or rename files or directories
 
-C. System & Process Management
+C. System & Process Management : 
 Command	            Description
 top	                View running processes
 ps aux	            Detailed list of running processes
@@ -43,7 +44,7 @@ sudo <command>	    Run command with superuser privileges
 shutdown -h now	    Shut down the Mac immediately
 reboot	            Restart the Mac
 
-D. Networking
+D. Networking : 
 Command	                        Description
 ping <host>	                    Ping a domain or IP
 ifconfig	                    Show network interface details
@@ -52,20 +53,20 @@ curl <url>	                    Fetch a URL
 scp <file> user@host:/path	    Secure copy to remote host
 ssh user@host	                SSH into remote server
 
-E. Searching & Finding
+E. Searching & Finding : 
 Command	                        Description
 find . -name "<filename>"	    Search for files
 grep "<text>" <file>	        Search text in files
 grep -r "<text>" <directory>	Recursively search text
 
-F. Disk & Permissions
+F. Disk & Permissions : 
 Command	                        Description
 df -h	                        Show disk usage
 du -sh *	                    Show size of files/directories
 chmod <mode> <file>	            Change file permissions
 chown <user>:<group> <file>	    Change ownership
 
-G. Package & Software Management
+G. Package & Software Management : 
 (macOS doesn't use apt/yum by default, but you can use Homebrew)
 Command	                                                                                            Description
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"	    Install Homebrew
@@ -73,9 +74,9 @@ brew install <package>	                                                         
 brew update	                                                                                        Update Homebrew
 brew upgrade	                                                                                    Upgrade installed packages
 
-H. Shortcuts
+H. Shortcuts : 
 Command	    Description
-Ctrl + C	Cancel running command
-Ctrl + L	Clear Terminal screen
+Cmd + C	    Cancel running command
+Cmd + L	    Clear Terminal screen
 ↑ / ↓	    Scroll through command history
 Tab	        Autocomplete command or file name
