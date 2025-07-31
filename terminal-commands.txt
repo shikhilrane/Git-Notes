@@ -1,37 +1,38 @@
 A. Basic Commands (frequently used commands) : 
 Command	                Description
 01. ls                  list item (it will show everuything inside of folder)
-02. cd ..	            Go up one directory level
+02. cd ..	              Go up one directory level
 03. cd folder_name      it will go into the next folder
-04. cd ~	            Go to home directory
+04. cd ~	              Go to home directory
 05. pwd                 present working directory (it shows directory/folder in which we are rn)
 06. ls -a               it shows hidden files (if it contains .git then this folder has access of git)
 07. mkdir folder_name   make new directory in project
 08. touch <filename>    Create new empty file
-09. open .              to open current folder from terminal
-10. code .              to open folder in s code
-11. ls -la	            List all files including hidden, in long format
-12. rm <file>	        Delete a file
-13. rm -r <directory>	Delete a directory and its contents
-14. cp <src> <dest>	    Copy files or directories
-15. mv <src> <dest>	    Move or rename files or directories
-16. Cmd + C	            Cancel running command
-17. Cmd + K	            Clear Terminal screen
-18. ↑ / ↓	            Scroll through command history
-19. Tab	                Autocomplete command or file name
+09. code <filename>     Code in the file in editor
+10. open .              to open current folder from terminal
+11. code .              to open folder in s code
+12. ls -la	            List all files including hidden, in long format
+13. rm <file>	          Delete a file
+14. rm -r <directory>	  Delete a directory and its contents
+15. cp <src> <dest>	    Copy files or directories
+16. mv <src> <dest>	    Move or rename files or directories
+17. Ctrl + C	          Cancel running command
+18. cmd + K	            Clear Terminal screen
+19. ↑ / ↓	              Scroll through command history
+20. Tab	                Autocomplete command or file name
 
 B. File and Directory Management : 
 Command	            Description
 ls	                List files in current directory
 ls -la	            List all files including hidden, in long format
 cd <directory>	    Change directory
-cd ..	            Go up one directory level
-cd ~	            Go to home directory
+cd ..	              Go up one directory level
+cd ~	              Go to home directory
 pwd	                how current directory
 mkdir <dirname>	    Create new directory
 touch <filename>    Create new empty file
-rm <file>	        Delete a file
-rm -r <directory>	Delete a directory and its contents
+rm <file>	          Delete a file
+rm -r <directory>	  Delete a directory and its contents
 cp <src> <dest>	    Copy files or directories from source to destination
 mv <src> <dest>	    Move or rename files or directories from source to destination
 
@@ -47,22 +48,22 @@ reboot	            Restart the Mac
 D. Networking : 
 Command	                        Description
 ping <host>	                    Ping a domain or IP
-ifconfig	                    Show network interface details
+ifconfig	                      Show network interface details
 netstat -an	                    Show network connections
 curl <url>	                    Fetch a URL
 scp <file> user@host:/path	    Secure copy to remote host
-ssh user@host	                SSH into remote server
+ssh user@host	                  SSH into remote server
 
 E. Searching & Finding : 
 Command	                        Description
-find . -name "<filename>"	    Search for files
-grep "<text>" <file>	        Search text in files
-grep -r "<text>" <directory>	Recursively search text
+find . -name "<filename>"	      Search for files
+grep "<text>" <file>	          Search text in files
+grep -r "<text>" <directory>	  Recursively search text
 
 F. Disk & Permissions : 
 Command	                        Description
-df -h	                        Show disk usage
-du -sh *	                    Show size of files/directories
+df -h	                          Show disk usage
+du -sh *	                      Show size of files/directories
 chmod <mode> <file>	            Change file permissions
 chown <user>:<group> <file>	    Change ownership
 
@@ -72,11 +73,11 @@ Command	                                                                        
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"	    Install Homebrew
 brew install <package>	                                                                            Install a package
 brew update	                                                                                        Update Homebrew
-brew upgrade	                                                                                    Upgrade installed packages
+brew upgrade	                                                                                      Upgrade installed packages
 
 H. Shortcuts : 
 Command	    Description
 Cmd + C	    Cancel running command
 Cmd + L	    Clear Terminal screen
-↑ / ↓	    Scroll through command history
+↑ / ↓	      Scroll through command history
 Tab	        Autocomplete command or file name
